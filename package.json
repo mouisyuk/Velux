@@ -1,0 +1,66 @@
+{
+  "name": "nuxt-jss-app",
+  "version": "1.0.0",
+  "private": true,
+  "config": {
+    "appName": "velux-marketing-cm",
+    "rootPlaceholders": [
+      "jss-main"
+    ],
+    "sitecoreConfigPath": "/App_Config/Include/zzz",
+    "graphQLEndpointPath": "/api/velux-marketing-cm",
+    "language": "en",
+    "appLanguages": [
+      "en"
+    ]
+  },
+  "scripts": {
+    "start": "cross-env-shell JSS_MODE=connected \"npm-run-all --serial bootstrap --parallel nuxt:dev watch-components\"",
+    "build": "cross-env-shell JSS_MODE=connected \"npm-run-all --serial bootstrap generate-components nuxt:build\"",
+    "bootstrap": "node scripts/bootstrap.js",
+    "nuxt:dev": "nuxt dev",
+    "nuxt:build": "nuxt build",
+    "watch-components": "node scripts/generate-component-factory.js --watch",
+    "generate-components": "node scripts/generate-component-factory.js",
+    "generate-entry-file": "node scripts/generate-entry-file.js"
+  },
+  "dependencies": {
+    "@nuxt/kit": "^3.0.0-rc.2",
+    "@nuxt/vite-builder": "^3.0.0-rc.2",
+    "@nuxtjs-alt/axios": "^1.0.10",
+    "@nuxtjs/composition-api": "^0.32.0",
+    "@nuxtjs/pwa": "^3.3.5",
+    "@pinia/nuxt": "^0.1.8",
+    "@sitecore-jss/sitecore-jss-vue": "^19.0.2",
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "follow-redirects": "^1.10.0",
+    "pinia": "^2.0.13",
+    "set-cookie-parser": "^2.4.3",
+    "vue": "^3.2.33",
+    "vue-loader": "^17.0.0",
+    "webpack-require-from": "^1.8.6"
+  },
+  "devDependencies": {
+    "@babel/register": "^7.14.5",
+    "@nuxtjs/tailwindcss": "^5.0.4",
+    "@sitecore-jss/sitecore-jss-cli": "^19.0.2",
+    "@sitecore-jss/sitecore-jss-dev-tools": "^19.0.2",
+    "@sitecore-jss/sitecore-jss-manifest": "^19.0.2",
+    "@tailwindcss/aspect-ratio": "^0.4.0",
+    "@tailwindcss/forms": "^0.5.1",
+    "@tailwindcss/typography": "^0.5.2",
+    "babel-eslint": "^10.1.0",
+    "chokidar": "^3.2.0",
+    "cross-env": "^7.0.2",
+    "dotenv": "^8.2.0",
+    "ngrok": "^4.0.1",
+    "nodemon": "^2.0.2",
+    "npm-run-all": "^4.1.5",
+    "nuxt": "3.0.0-rc.2",
+    "tailwindcss-debug-screens": "^2.2.1"
+  }
+}
