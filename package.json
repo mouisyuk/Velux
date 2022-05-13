@@ -17,6 +17,8 @@
   "scripts": {
     "start": "cross-env-shell JSS_MODE=connected \"npm-run-all --serial bootstrap --parallel nuxt:dev watch-components\"",
     "build": "cross-env-shell JSS_MODE=connected \"npm-run-all --serial bootstrap generate-components nuxt:build\"",
+    "generate": "cross-env-shell JSS_MODE=connected NUXT_EXPORT=true \"npm-run-all --serial bootstrap nuxt:generate\"",
+    "nuxt:generate": "nuxt generate",
     "bootstrap": "node scripts/bootstrap.js",
     "nuxt:dev": "nuxt dev",
     "nuxt:build": "nuxt build",

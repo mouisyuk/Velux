@@ -43,6 +43,7 @@ export default defineNuxtConfig({
     dir: 'out',
     crawler: false,
   },
+  ssr: false,
   server: {
     port: serverConfig.resolveListeningPort(),
   },
