@@ -18,10 +18,10 @@
     "start": "cross-env-shell JSS_MODE=connected \"npm-run-all --serial bootstrap --parallel nuxt:dev watch-components\"",
     "build": "cross-env-shell JSS_MODE=connected \"npm-run-all --serial bootstrap generate-components nuxt:build\"",
     "generate": "cross-env-shell JSS_MODE=connected NUXT_EXPORT=true \"npm-run-all --serial bootstrap nuxt:generate\"",
-    "nuxt:generate": "nuxt generate",
+    "nuxt:generate": "nuxi generate",
     "bootstrap": "node scripts/bootstrap.js",
-    "nuxt:dev": "nuxt dev",
-    "nuxt:build": "nuxt build",
+    "nuxt:dev": "nuxi dev",
+    "nuxt:build": "nuxi build",
     "watch-components": "node scripts/generate-component-factory.js --watch",
     "generate-components": "node scripts/generate-component-factory.js",
     "generate-entry-file": "node scripts/generate-entry-file.js"
