@@ -31,19 +31,5 @@ export default defineNuxtConfig({
         },
       },
     ]
-  ],
-  build: {
-    extend(config, ctx) {
-      if (ctx.isDev) {
-        config.devtool = ctx.isClient ? 'source-map' : 'inline-source-map';
-      }
-    },
-  },
-  generate: {
-    dir: 'out',
-    crawler: false,
-  },
-  server: {
-    port: serverConfig.resolveListeningPort(),
-  },
+  ]
 });
