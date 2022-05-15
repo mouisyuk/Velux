@@ -1,5 +1,6 @@
 <template>
   <div>
+    <testComponent/>
     <sc-placeholder 
       v-if="routeData" 
       name="main" 
