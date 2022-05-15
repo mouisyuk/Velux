@@ -5,9 +5,11 @@ export default defineNuxtRouteMiddleware(async (to) => {
 
   const mainStore = useMainStore()
 
+  // TO:DO Add implementation for getting language from URL (route patterns)
+  // TO:DO Add implementation for sending query params to sitecore app from URL
  try {
   await useAsyncData('getLayoutData', () => mainStore.getLayoutData({
-    route: to.href,
+    route: to.path,
     nuxtContext: nuxtContext
   }))
   } catch(error) {

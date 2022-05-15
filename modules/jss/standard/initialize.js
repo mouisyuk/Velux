@@ -4,7 +4,7 @@ import { defineNuxtModule, addPlugin } from '@nuxt/kit'
 
 export default defineNuxtModule({
   hooks: {
-    'builder:extendPlugins': () => {
+    'builder:extendPlugins': (plugins) => {
       const configPluginIndex = plugins.findIndex(
         (plugin) => plugin.src.indexOf('jss-config-runtime-plugin') !== -1
       );

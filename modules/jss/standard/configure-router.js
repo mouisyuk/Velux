@@ -24,7 +24,7 @@ function configureRouter(nuxtConfig) {
       routes.unshift({
         path: routePattern,
         components: {
-          default: resolve(__dirname, '../../../pages/index.vue'),
+          default: resolve(__dirname, '../../../pages/[[slug]].vue'),
         },
       });
     });
